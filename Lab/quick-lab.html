@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab-container{
+            border: 1px solid;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .tab-header{
+            display: inline;
+            padding: 10px;
+        }
+        button{
+            padding: 20px;
+            border: none;
+        }
+        .tab-body{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+  <div class="tab-container">
+        <div class="tab-header">
+             <button onclick="showBody1()">Tabe 1</button>
+             <button onclick="showBody2()">Tabe 2</button>
+             <button onclick="showBody3()">Tabe 3</button>
+
+        </div>
+       <div class="tab-body">
+        <div id="tab-body1">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos iusto asperiores labore molestias? Ipsa sunt consequuntur labore exercitationem delectus quidem quam quod, eum modi repellendus doloribus vel veniam amet!
+        </div>
+        <div id="tab-body2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis exercitationem veniam atque quisquam aliquid necessitatibus architecto corrupti autem eligendi.
+        </div>
+        <div id="tab-body3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt praesentium molestiae eligendi tenetur saepe consequatur aliquam deleniti et voluptatibus numquam.
+        </div>
+
+       </div>
+  </div>
+  <script>
+       function showBody1(){
+           let body1 = document.getElementById('tab-body1')  
+           body1.style.display = 'block'
+
+           let body2 = document.getElementById('tab-body2')
+           body2.style.display = 'none'
+
+           let body3 = document.getElementById('tab-body3')
+           body3.style.display = 'none'
+       }
+       function showBody2(){
+         let body2 = document.getElementById('tab-body2')
+         body2.style.display = 'block'
+
+         let body1 = document.getElementById('tab-body1')  
+         body1.style.display = 'none'
+
+         let body3 = document.getElementById('tab-body3')
+         body3.style.display = 'none'  
+       }
+       function showBody3(){
+            let body3 = document.getElementById('tab-body3')
+            body3.style.display = 'block'
+
+            let body1 = document.getElementById('tab-body1')  
+            body1.style.display = 'none'
+
+            let body2 = document.getElementById('tab-body2')
+           body2.style.display = 'none'
+
+       }
+  </script>
+</body>
+</html>

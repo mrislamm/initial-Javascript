@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .action-button{
+            float: right;
+        }
+        .heading{
+            display: inline-block;
+            font-size: 1.5em;
+        }
+        .question-container{
+            border: 1px solid grey;
+            padding: 10px;
+        }
+        .body{
+            margin: 10px;
+            font-size: 0.9em;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <DIV class="question-container">
+        <div class="header">
+            <div class="heading">DO I have to allow the use of cookies?</div>
+            <div class="action-button">
+                <button onclick="showBody()" id="add-button">+</button>
+                <button onclick="hideBody()" id="hide-button">-</button>
+            </div>
+        </div>
+        <div class="body" id="question-body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis odio excepturi numquam libero voluptates at magnam maxime. Similique ut veniam magni ipsum. Mollitia labore quidem tempore numquam, perspiciatis amet consectetur.
+        </div>
+    </DIV>
+    <script>
+
+            let body = document.getElementById('question-body')
+            body.style.display = 'none'
+
+            
+            let hideButton = document.getElementById('hide-button')
+            hideButton.style.display = 'none'
+
+            
+        function showBody(){
+             let body = document.getElementById('question-body')
+             body.style.display = 'block'
+
+             let addBottom  = document.getElementById('add-button')
+             addBottom.style.display ='none'
+
+             
+            let hideButton = document.getElementById('hide-button')
+            hideButton.style.display = 'inline-block'
+        }
+        function hideBody(){
+            let body = document.getElementById('question-body')
+            body.style.display = 'none'
+
+            let hideButton = document.getElementById('hide-button')
+            hideButton.style.display = 'none'
+
+            let addBottom  = document.getElementById('add-button')
+             addBottom.style.display ='inline-block'
+
+        }
+              
+    </script>
+</body>
+</html>
