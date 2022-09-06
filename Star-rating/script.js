@@ -1,3 +1,7 @@
+
+ let require = document.getElementById('required')
+ require.style.display = 'none'
+
 function rate(){
     let inputSname = document.getElementById('songName')
     let song = inputSname.value
@@ -9,14 +13,17 @@ function rate(){
     rate2 = rate.value
     let starSymbol = '&#9733;'
 
-    
+   
 
     let div = document.getElementById('output')
-    div.innerHTML = div.innerHTML += '<div class="div"><span>' + song + '</span> by <span> ' + artist + '</span> <span class="star"> ' + starSymbol.repeat(rate2) + '</span> </div>' 
+    if(song != ''){
+    div.innerHTML = div.innerHTML += '<div class="div"><span>' + song + '</span> by <span> ' + artist + '</span> <span class="star"> ' + starSymbol.repeat(rate2) + '</span> </div>'
+    } 
    
     if (song===""){
     alert ('Please Enter project name.')
     inputSname.style.border = '1.5px solid red'
+    require.style.display = 'block'
     }
     if (artist== ''){
         alert('Please Enter Dveloper name .')
